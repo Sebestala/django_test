@@ -1,0 +1,14 @@
+{% for elem in ActivitiesForm.sport %}
+	<article>
+		<h2>{{ elem.sport }}</h2>
+	</article>
+{% endfor %}
+<br />
+<form action="{% url "activities" %}" method="post">
+	<label for="your_name">Sport : </label>
+	{% csrf_token %}
+	<input id="your_name" type="text" name="your_name">
+	<input type="submit" value"OK" />
+</form>
+<br />
+<h3><a href="{% url 'acceuil'%}">Retour à l'acceuil</a></h3>
