@@ -1,0 +1,16 @@
+{% extends 'layouts/default.html' %}
+{% block body %}
+
+
+<h1><center>TO-DO LIST</center></h1>
+<hr color='blue' width='23%' size='4'>
+<br />
+{% for users in users %}
+	<article>
+		<h2><li>{{ users.name }}</li></h2>
+		<hr />
+	</article>
+{% endfor %}
+
+
+{% endblock %}
