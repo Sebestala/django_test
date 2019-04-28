@@ -8,8 +8,10 @@
 {% for users in users %}
 	<article>
 		<h2><li>{{ users.name }}</li></h2>
-		<hr />
 	</article>
+	{% if not loop.last %}
+	<hr />
+	{% endif %}
 {% endfor %}
 
 
